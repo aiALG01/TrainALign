@@ -32,7 +32,7 @@ class _TrainerKalenderScreenState extends ConsumerState<TrainerKalenderScreen> {
   Widget build(BuildContext context) {
     final trainer = ref.watch(currentNutzerProvider).value;
     if (trainer == null) {
-      return const Center(child: CircularProgressIndicator());
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     final termineAsync = ref.watch(termineFuerTrainerProvider(trainer.id));

@@ -32,14 +32,14 @@ class SchuelerTermineScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final schueler = ref.watch(currentNutzerProvider).value;
     if (schueler == null) {
-      return const Center(child: CircularProgressIndicator());
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     final termineAsync = ref.watch(termineFuerSchuelerProvider(schueler.id));
     final dateFormat = DateFormatDeAt();
 
     return termineAsync.when(
-      loading: () => const Center(child: CircularProgressIndicator()),
+      loading: () => const Scaffold(body: Center(child: CircularProgressIndicator())),
       error: (error, _) => Center(child: Text('Fehler: $error')),
       data: (termine) {
         if (termine.isEmpty) {

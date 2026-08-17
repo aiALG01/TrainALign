@@ -161,7 +161,7 @@ class _TerminFormScreenState extends ConsumerState<TerminFormScreen> {
                   loading: () => const LinearProgressIndicator(),
                   error: (e, _) => Text('Schüler konnten nicht geladen werden: $e'),
                   data: (eintraege) => DropdownButtonFormField<String>(
-                    initialValue: _schuelerId,
+                    value: _schuelerId,
                     decoration: const InputDecoration(labelText: 'Schüler'),
                     items: eintraege
                         .map((e) => DropdownMenuItem(
@@ -184,7 +184,7 @@ class _TerminFormScreenState extends ConsumerState<TerminFormScreen> {
                         loading: () => const LinearProgressIndicator(),
                         error: (e, _) => Text('Pferde konnten nicht geladen werden: $e'),
                         data: (pferde) => DropdownButtonFormField<String?>(
-                          initialValue: _pferdId,
+                          value: _pferdId,
                           decoration: const InputDecoration(labelText: 'Pferd (optional)'),
                           items: [
                             const DropdownMenuItem<String?>(value: null, child: Text('Kein Pferd')),
@@ -230,7 +230,7 @@ class _TerminFormScreenState extends ConsumerState<TerminFormScreen> {
                 ),
                 const SizedBox(height: 16),
                 DropdownButtonFormField<TerminStatus>(
-                  initialValue: _status,
+                  value: _status,
                   decoration: const InputDecoration(labelText: 'Status'),
                   items: TerminStatus.values
                       .map((s) => DropdownMenuItem(value: s, child: Text(s.wert)))

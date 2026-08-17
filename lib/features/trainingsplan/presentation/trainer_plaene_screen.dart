@@ -15,7 +15,7 @@ class TrainerPlaeneScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final trainer = ref.watch(currentNutzerProvider).value;
     if (trainer == null) {
-      return const Center(child: CircularProgressIndicator());
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     final plaeneAsync = ref.watch(plaeneFuerTrainerProvider(trainer.id));

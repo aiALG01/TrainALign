@@ -26,7 +26,7 @@ class _TrainingsstundenListeScreenState extends ConsumerState<TrainingsstundenLi
   Widget build(BuildContext context) {
     final schueler = ref.watch(currentNutzerProvider).value;
     if (schueler == null) {
-      return const Center(child: CircularProgressIndicator());
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     final stundenAsync = ref.watch(trainingsstundenFuerSchuelerProvider(schueler.id));

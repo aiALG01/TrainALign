@@ -189,7 +189,7 @@ class _TrainingsplanErstellenScreenState
                 loading: () => const LinearProgressIndicator(),
                 error: (e, _) => Text('Fehler: $e'),
                 data: (eintraege) => DropdownButtonFormField<String>(
-                  initialValue: _schuelerId,
+                  value: _schuelerId,
                   decoration: const InputDecoration(labelText: 'Schüler auswählen'),
                   items: eintraege
                       .map((e) => DropdownMenuItem(
@@ -217,7 +217,7 @@ class _TrainingsplanErstellenScreenState
                       loading: () => const LinearProgressIndicator(),
                       error: (e, _) => Text('Fehler: $e'),
                       data: (pferde) => DropdownButtonFormField<String?>(
-                        initialValue: _pferdId,
+                        value: _pferdId,
                         decoration: const InputDecoration(labelText: 'Pferd'),
                         items: [
                           const DropdownMenuItem<String?>(value: null, child: Text('Kein Pferd')),

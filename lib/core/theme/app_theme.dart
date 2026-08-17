@@ -45,9 +45,10 @@ class AppTheme {
         border: OutlineInputBorder(),
         filled: true,
       ),
-      cardTheme: const CardThemeData(
-        clipBehavior: Clip.antiAlias,
-      ),
+      // copyWith statt eines konkreten Klassennamens (CardTheme/CardThemeData
+      // wurde je nach Flutter-Version umbenannt) – so bleibt das über einen
+      // größeren Versionsbereich hinweg kompatibel.
+      cardTheme: base.cardTheme.copyWith(clipBehavior: Clip.antiAlias),
     );
   }
 }

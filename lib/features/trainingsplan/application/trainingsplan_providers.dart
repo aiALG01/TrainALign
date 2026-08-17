@@ -7,7 +7,10 @@ import '../domain/trainingseinheit_bundle.dart';
 import '../domain/trainingsplan_model.dart';
 
 final trainingsplanRepositoryProvider = Provider<TrainingsplanRepository>((ref) {
-  return TrainingsplanRepository(ref.watch(supabaseClientProvider));
+  final client = ref.watch(supabaseClientProvider);
+  return client != null
+      ? SupabaseTrainingsplanRepository(client)
+      : MockTrainingsplanRepository();
 });
 
 final schwaechenFuerNutzerProvider =

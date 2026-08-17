@@ -5,7 +5,10 @@ import '../data/trainer_schueler_repository.dart';
 import '../domain/trainer_schueler_model.dart';
 
 final trainerSchuelerRepositoryProvider = Provider<TrainerSchuelerRepository>((ref) {
-  return TrainerSchuelerRepository(ref.watch(supabaseClientProvider));
+  final client = ref.watch(supabaseClientProvider);
+  return client != null
+      ? SupabaseTrainerSchuelerRepository(client)
+      : MockTrainerSchuelerRepository();
 });
 
 /// Alle Schüler-Verknüpfungen eines Trainers (jeder Status).
