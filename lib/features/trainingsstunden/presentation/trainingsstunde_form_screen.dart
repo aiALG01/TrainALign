@@ -110,7 +110,7 @@ class _TrainingsstundeFormScreenState extends ConsumerState<TrainingsstundeFormS
                   loading: () => const LinearProgressIndicator(),
                   error: (e, _) => Text('Pferde konnten nicht geladen werden: $e'),
                   data: (pferde) => DropdownButtonFormField<String>(
-                    initialValue: _pferdId,
+                    value: _pferdId,
                     decoration: const InputDecoration(labelText: 'Pferd'),
                     items: pferde
                         .map((p) => DropdownMenuItem(value: p.id, child: Text(p.name)))
@@ -130,7 +130,7 @@ class _TrainingsstundeFormScreenState extends ConsumerState<TrainingsstundeFormS
                   loading: () => const LinearProgressIndicator(),
                   error: (e, _) => Text('Trainingspläne konnten nicht geladen werden: $e'),
                   data: (plaene) => DropdownButtonFormField<String?>(
-                    initialValue: _trainingsplanId,
+                    value: _trainingsplanId,
                     decoration: const InputDecoration(labelText: 'Trainingsplan (optional)'),
                     items: [
                       const DropdownMenuItem<String?>(value: null, child: Text('Kein Plan')),

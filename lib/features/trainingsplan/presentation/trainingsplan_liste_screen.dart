@@ -14,14 +14,14 @@ class TrainingsplanListeScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final schueler = ref.watch(currentNutzerProvider).value;
     if (schueler == null) {
-      return const Center(child: CircularProgressIndicator());
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     final plaeneAsync = ref.watch(plaeneFuerSchuelerProvider(schueler.id));
     final dateFormat = DateFormatDeAt();
 
     return plaeneAsync.when(
-      loading: () => const Center(child: CircularProgressIndicator()),
+      loading: () => const Scaffold(body: Center(child: CircularProgressIndicator())),
       error: (error, _) => Center(child: Text('Fehler: $error')),
       data: (plaene) {
         if (plaene.isEmpty) {

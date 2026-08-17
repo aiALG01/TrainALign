@@ -5,7 +5,8 @@ import '../data/termin_repository.dart';
 import '../domain/termin_model.dart';
 
 final terminRepositoryProvider = Provider<TerminRepository>((ref) {
-  return TerminRepository(ref.watch(supabaseClientProvider));
+  final client = ref.watch(supabaseClientProvider);
+  return client != null ? SupabaseTerminRepository(client) : MockTerminRepository();
 });
 
 final termineFuerTrainerProvider =

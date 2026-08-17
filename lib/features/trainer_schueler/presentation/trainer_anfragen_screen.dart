@@ -34,13 +34,13 @@ class TrainerAnfragenScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final schueler = ref.watch(currentNutzerProvider).value;
     if (schueler == null) {
-      return const Center(child: CircularProgressIndicator());
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     final eintraegeAsync = ref.watch(trainerFuerSchuelerProvider(schueler.id));
 
     return eintraegeAsync.when(
-      loading: () => const Center(child: CircularProgressIndicator()),
+      loading: () => const Scaffold(body: Center(child: CircularProgressIndicator())),
       error: (error, _) => Center(child: Text('Fehler: $error')),
       data: (eintraege) {
         if (eintraege.isEmpty) {

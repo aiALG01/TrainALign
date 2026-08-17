@@ -5,7 +5,8 @@ import '../data/pferd_repository.dart';
 import '../domain/pferd_model.dart';
 
 final pferdRepositoryProvider = Provider<PferdRepository>((ref) {
-  return PferdRepository(ref.watch(supabaseClientProvider));
+  final client = ref.watch(supabaseClientProvider);
+  return client != null ? SupabasePferdRepository(client) : MockPferdRepository();
 });
 
 final pferdeFuerReiterProvider =

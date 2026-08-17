@@ -8,6 +8,7 @@ import '../../features/home/presentation/trainer_home_screen.dart';
 import '../../features/onboarding/presentation/onboarding_screen.dart';
 import '../auth/auth_providers.dart';
 import '../auth/nutzer_model.dart';
+import '../config/dev_config.dart';
 import 'app_routes.dart';
 import 'go_router_refresh_stream.dart';
 
@@ -16,13 +17,19 @@ import 'go_router_refresh_stream.dart';
 ///  - eingeloggt, keine nutzer-Zeile -> /onboarding
 ///  - eingeloggt als Trainer      -> /trainer
 ///  - eingeloggt als Schüler      -> /schueler
+///
+/// Ist [kDevBypassAuth] aktiv, werden alle Redirects übersprungen und die
+/// App startet direkt auf dem Trainer-Startscreen (UI-Vorschau ohne Login
+/// und ohne Backend).
 final appRouterProvider = Provider<GoRouter>((ref) {
   final authRepository = ref.watch(authRepositoryProvider);
 
   return GoRouter(
-    initialLocation: AppRoutes.login,
+    initialLocation: kDevBypassAuth ? AppRoutes.trainerHome : AppRoutes.login,
     refreshListenable: GoRouterRefreshStream(authRepository.authStateChanges),
     redirect: (context, state) async {
+      if (kDevBypassAuth) return null;
+
       final loggedIn = authRepository.currentSession != null;
       final location = state.matchedLocation;
 

@@ -5,7 +5,10 @@ import '../data/trainingsstunde_repository.dart';
 import '../domain/trainingsstunde_model.dart';
 
 final trainingsstundeRepositoryProvider = Provider<TrainingsstundeRepository>((ref) {
-  return TrainingsstundeRepository(ref.watch(supabaseClientProvider));
+  final client = ref.watch(supabaseClientProvider);
+  return client != null
+      ? SupabaseTrainingsstundeRepository(client)
+      : MockTrainingsstundeRepository();
 });
 
 final trainingsstundenFuerSchuelerProvider =
