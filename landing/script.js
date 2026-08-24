@@ -69,10 +69,20 @@
     });
   });
 
-  /* ---------- Dezentes Scroll-Reveal ---------- */
+  /* ---------- Dezentes Scroll-Reveal ----------
+     Inhalte sind per Default (siehe style.css) sichtbar, damit ohne JS,
+     bei blockiertem Skript oder in einem Headless-Renderer nie eine
+     leere Sektion ausgeliefert wird. Erst wenn dieser Code läuft UND
+     "prefers-reduced-motion" nicht aktiv ist, wird die Hidden-then-
+     Fade-in-Choreografie über die Klasse "reveal-armed" auf <html>
+     scharf geschaltet; danach übernimmt IntersectionObserver das
+     Einblenden pro Element. */
   var revealTargets = document.querySelectorAll("[data-reveal]");
+  var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if ("IntersectionObserver" in window && revealTargets.length) {
+  if ("IntersectionObserver" in window && revealTargets.length && !prefersReducedMotion) {
+    document.documentElement.classList.add("reveal-armed");
+
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
@@ -87,10 +97,6 @@
 
     revealTargets.forEach(function (el) {
       observer.observe(el);
-    });
-  } else {
-    revealTargets.forEach(function (el) {
-      el.classList.add("is-visible");
     });
   }
 

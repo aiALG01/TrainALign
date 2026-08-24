@@ -17,7 +17,7 @@
 
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-<header class="site-header">
+<header class="site-header theme-dark">
   <div class="wrap header-inner">
     <a class="wordmark" href="#top">TrainAlign</a>
 
@@ -43,44 +43,71 @@
 <main id="main">
 
   <!-- ============ HERO ============ -->
-  <section class="hero" id="top">
+  <section class="hero theme-dark" id="top">
+
+    <!-- Dekorative Wellen-/Marmor-Textur im Hintergrund, angelehnt an die
+         Grün-auf-Creme-Schwünge im Moodboard. Rein dekorativ. -->
+    <svg class="hero-texture" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <path class="hero-texture-line" d="M-50,180 C150,80 250,280 450,180 C650,80 700,220 850,140" />
+      <path class="hero-texture-line" d="M-50,340 C120,260 260,420 430,340 C620,250 700,400 850,320" />
+      <path class="hero-texture-line" d="M-50,520 C160,430 300,600 480,510 C640,430 720,560 850,490" />
+    </svg>
+
     <div class="wrap hero-grid">
-      <div class="hero-text" data-reveal>
-        <p class="eyebrow">Für Reitställe, Trainer:innen &amp; Schüler:innen</p>
-        <h1>Im Einklang<br>trainieren.</h1>
-        <p class="hero-subline">
-          TrainAlign bringt Trainer:in und Schüler:in in einen gemeinsamen Raum
-          für Termine, Trainingspläne und Fortschritt – klar, persönlich und
-          ohne Zettelwirtschaft.
+      <div class="hero-text" data-reveal-group="hero">
+        <p class="eyebrow" data-reveal>Für Reitställe, Trainer:innen &amp; Schüler:innen</p>
+        <h1 data-reveal>Im Einklang<br>trainieren.</h1>
+        <p class="hero-subline" data-reveal>
+          Schluss mit Zetteln, Chatverläufen und halbem Gedächtnis:
+          TrainAlign bringt Trainer:in und Schüler:in in einen gemeinsamen
+          Raum für Termine, Trainingspläne und Fortschritt.
         </p>
-        <div class="hero-actions">
+        <div class="hero-actions" data-reveal>
           <a class="btn btn-primary" href="#warteliste">Frühen Zugang sichern</a>
           <a class="btn btn-ghost" href="#problem-loesung">Mehr erfahren</a>
         </div>
       </div>
 
       <div class="hero-visual" data-reveal>
+        <!-- Atmosphäre-Foto: echtes, verifiziertes Unsplash-Foto (kein Screenshot
+             der App). Quelle: "Horse jumping over obstacle" von Markus Spiske,
+             unsplash.com/photos/horse-jumping-over-obstacle-vdHWDgUTcIk,
+             Unsplash-Lizenz (kostenlos, keine Zuschreibung verpflichtend). -->
+        <div
+          class="hero-photo"
+          role="img"
+          aria-label="Reiterin und Pferd im Sprung über ein Hindernis"
+        ></div>
+
+        <p class="hero-sticker">
+          <span>Plan.</span>
+          <span>Reiten.</span>
+          <span>Wachsen.</span>
+        </p>
+
         <!-- Platzhalter: Noch keine echten Screenshots, App ist vor dem Launch -->
-        <div class="mockup-frame" role="img" aria-label="Platzhalter für eine zukünftige Ansicht der TrainAlign-App">
-          <span class="mockup-frame-label">Platzhalter: App&nbsp;&ndash;&nbsp;Ansicht</span>
-          <div class="mockup-frame-glyph" aria-hidden="true">
-            <svg viewBox="0 0 48 48" width="40" height="40">
-              <rect x="7" y="10" width="34" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
-              <path d="M7 18h34" stroke="currentColor" stroke-width="2"/>
-              <path d="M15 24h10M15 30h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
+        <div class="mockup-chip" role="img" aria-label="Platzhalter für eine zukünftige Ansicht der TrainAlign-App">
+          <svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true">
+            <rect x="7" y="10" width="34" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M7 18h34" stroke="currentColor" stroke-width="2"/>
+            <path d="M15 24h10M15 30h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>Platzhalter: App&#8209;Ansicht</span>
         </div>
       </div>
     </div>
+
+    <svg class="section-wave" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="wave-fill-light" d="M0,32 C240,90 480,0 720,40 C960,80 1200,10 1440,48 L1440,96 L0,96 Z" />
+    </svg>
   </section>
 
   <!-- ============ PROBLEM -> LÖSUNG ============ -->
-  <section class="problem-solution" id="problem-loesung">
+  <section class="problem-solution theme-light" id="problem-loesung">
     <div class="wrap ps-grid">
       <div class="ps-copy" data-reveal>
         <p class="eyebrow">Der Status quo</p>
-        <h2>Trainingsplanung verdient mehr als lose Enden.</h2>
+        <p class="ps-statement">Zwei Kalender sind kein System.</p>
         <p>
           Heute verteilt sich das Training auf Notizzettel, Chatverläufe und
           das Gedächtnis: Wer war wann auf dem Platz, welche Übung stand an,
@@ -94,21 +121,22 @@
         </p>
       </div>
 
-      <!-- Atmosphäre-Bild: hochwertiges Reitsport-Foto (Dressur/Springen) einsetzen.
-           Empfehlung: Unsplash-Suche "dressage horse" oder "show jumping",
-           Pexels-Suche "Reitsport" / "equestrian training" – Quelle hier als
-           Kommentar vermerken, z. B.:
-           Foto von [Fotograf:in] auf Unsplash (unsplash.com/photos/…) -->
+      <!-- Atmosphäre-Foto: echtes, verifiziertes Unsplash-Foto. Quelle:
+           "Horse jumping over white fence during daytime" (Dublin Horse
+           Show, Dublin, Irland) von K. Mitch Hodge,
+           unsplash.com/photos/tA9xkdbukdc, Unsplash-Lizenz. -->
       <div class="ps-image" data-reveal>
-        <div class="photo-placeholder">
-          <span>Platzhalter: Reitsport-Foto (Unsplash/Pexels)</span>
-        </div>
+        <div
+          class="photo-frame photo-frame--secondary"
+          role="img"
+          aria-label="Pferd springt beim Dublin Horse Show über ein weißes Hindernis"
+        ></div>
       </div>
     </div>
   </section>
 
   <!-- ============ FUNKTIONEN ============ -->
-  <section class="features" id="funktionen">
+  <section class="features theme-light" id="funktionen">
     <div class="wrap">
       <div class="section-head" data-reveal>
         <p class="eyebrow">Funktionen</p>
@@ -118,7 +146,7 @@
       <div class="feature-grid">
         <article class="feature-card" data-reveal>
           <span class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28">
+            <svg viewBox="0 0 32 32" width="26" height="26">
               <rect x="5" y="7" width="22" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
               <path d="M5 13h22M10 4v6M22 4v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
               <circle cx="11" cy="19" r="1.6" fill="currentColor"/>
@@ -130,9 +158,9 @@
           <p>Ein gemeinsamer Kalender für Trainer:in und Schüler:in – Termine sind für beide Seiten sofort sichtbar, ohne Rückfragen.</p>
         </article>
 
-        <article class="feature-card" data-reveal>
+        <article class="feature-card feature-card--alt" data-reveal>
           <span class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28">
+            <svg viewBox="0 0 32 32" width="26" height="26">
               <path d="M6 6h13a3 3 0 0 1 3 3v17a2 2 0 0 0-2-2H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
               <path d="M6 6v18h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
               <path d="M11 12h6M11 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -144,7 +172,7 @@
 
         <article class="feature-card" data-reveal>
           <span class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28">
+            <svg viewBox="0 0 32 32" width="26" height="26">
               <path d="M6 26V10M14 26V6M22 26v-9M26 26H6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </span>
@@ -152,9 +180,9 @@
           <p>Einheiten mit und ohne Trainer:in festhalten – so wird Fortschritt sichtbar, statt nur gefühlt.</p>
         </article>
 
-        <article class="feature-card" data-reveal>
+        <article class="feature-card feature-card--alt" data-reveal>
           <span class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="28" height="28">
+            <svg viewBox="0 0 32 32" width="26" height="26">
               <circle cx="11" cy="11" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
               <circle cx="22" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
               <path d="M4 27c0-4.4 3.4-7.5 7.5-7.5S19 22.6 19 27" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -169,7 +197,7 @@
   </section>
 
   <!-- ============ SO FUNKTIONIERT'S ============ -->
-  <section class="steps" id="so-funktionierts">
+  <section class="steps theme-light" id="so-funktionierts">
     <div class="wrap">
       <div class="section-head" data-reveal>
         <p class="eyebrow">Ablauf</p>
@@ -197,7 +225,7 @@
   </section>
 
   <!-- ============ FÜR WEN ============ -->
-  <section class="audience" id="fuer-wen">
+  <section class="audience theme-light" id="fuer-wen">
     <div class="wrap">
       <div class="section-head" data-reveal>
         <p class="eyebrow">Für wen</p>
@@ -205,15 +233,15 @@
       </div>
 
       <div class="audience-grid">
-        <article class="audience-card" data-reveal>
+        <article class="audience-card audience-card--green" data-reveal>
           <h3>Reittrainer:innen</h3>
           <p>Behalte alle Schüler:innen, Pläne und Termine im Blick – ohne Excel-Tabellen und WhatsApp-Nachrichten.</p>
         </article>
-        <article class="audience-card" data-reveal>
+        <article class="audience-card audience-card--lavender" data-reveal>
           <h3>Reitschüler:innen</h3>
           <p>Sieh deinen Trainingsplan, dokumentiere jede Einheit und erkenne, wo du dich verbesserst.</p>
         </article>
-        <article class="audience-card" data-reveal>
+        <article class="audience-card audience-card--beige" data-reveal>
           <h3>Reitställe &amp; Vereine</h3>
           <p>Gib Trainer:innen und Mitgliedern ein gemeinsames System an die Hand – strukturiert und verlässlich.</p>
         </article>
@@ -222,7 +250,11 @@
   </section>
 
   <!-- ============ WARTELISTE ============ -->
-  <section class="waitlist" id="warteliste">
+  <section class="waitlist theme-dark" id="warteliste">
+    <svg class="section-wave section-wave--top" viewBox="0 0 1440 96" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="wave-fill-light" d="M0,48 C240,10 480,80 720,40 C960,0 1200,90 1440,32 L1440,0 L0,0 Z" />
+    </svg>
+
     <div class="wrap waitlist-inner" data-reveal>
       <p class="eyebrow">Früher Zugang</p>
       <h2>Sei von Anfang an dabei.</h2>
@@ -260,7 +292,7 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer theme-dark">
   <div class="wrap footer-inner">
     <div class="footer-brand">
       <p class="wordmark footer-wordmark">TrainAlign</p>
