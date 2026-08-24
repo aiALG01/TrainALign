@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrainAlign – Training im Einklang für Reittrainer:innen und Schüler:innen</title>
+<meta name="description" content="TrainAlign verbindet Reittrainer:innen und ihre Schüler:innen in einem gemeinsamen Raum für Termine, Trainingspläne und Fortschritt. Sichere dir frühen Zugang.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<!-- Fonts: Boska (Serif, Headlines) & Ranade (Sans, Fließtext) via Fontshare -->
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=boska@400,700&f[]=ranade@400,500&display=swap">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="#top">TrainAlign</a>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="sr-only">Menü öffnen</span>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#so-funktionierts">So funktioniert's</a></li>
+        <li><a href="#fuer-wen">Für wen</a></li>
+        <li><a href="#warteliste">Warteliste</a></li>
+      </ul>
+      <a class="btn btn-primary btn-nav" href="#warteliste">Frühen Zugang sichern</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-text" data-reveal>
+        <p class="eyebrow">Für Reitställe, Trainer:innen &amp; Schüler:innen</p>
+        <h1>Im Einklang<br>trainieren.</h1>
+        <p class="hero-subline">
+          TrainAlign bringt Trainer:in und Schüler:in in einen gemeinsamen Raum
+          für Termine, Trainingspläne und Fortschritt – klar, persönlich und
+          ohne Zettelwirtschaft.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#warteliste">Frühen Zugang sichern</a>
+          <a class="btn btn-ghost" href="#problem-loesung">Mehr erfahren</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal>
+        <!-- Platzhalter: Noch keine echten Screenshots, App ist vor dem Launch -->
+        <div class="mockup-frame" role="img" aria-label="Platzhalter für eine zukünftige Ansicht der TrainAlign-App">
+          <span class="mockup-frame-label">Platzhalter: App&nbsp;&ndash;&nbsp;Ansicht</span>
+          <div class="mockup-frame-glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <rect x="7" y="10" width="34" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M7 18h34" stroke="currentColor" stroke-width="2"/>
+              <path d="M15 24h10M15 30h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM -> LÖSUNG ============ -->
+  <section class="problem-solution" id="problem-loesung">
+    <div class="wrap ps-grid">
+      <div class="ps-copy" data-reveal>
+        <p class="eyebrow">Der Status quo</p>
+        <h2>Trainingsplanung verdient mehr als lose Enden.</h2>
+        <p>
+          Heute verteilt sich das Training auf Notizzettel, Chatverläufe und
+          das Gedächtnis: Wer war wann auf dem Platz, welche Übung stand an,
+          was hat beim letzten Mal noch gehakt? Trainer:in und Schüler:in
+          schauen selten auf denselben Stand.
+        </p>
+        <p>
+          TrainAlign führt Kalender, Trainingsplan und Dokumentation in
+          einem gemeinsamen Konto pro Rollenpaar zusammen – beide Seiten
+          sehen jederzeit denselben, aktuellen Stand.
+        </p>
+      </div>
+
+      <!-- Atmosphäre-Bild: hochwertiges Reitsport-Foto (Dressur/Springen) einsetzen.
+           Empfehlung: Unsplash-Suche "dressage horse" oder "show jumping",
+           Pexels-Suche "Reitsport" / "equestrian training" – Quelle hier als
+           Kommentar vermerken, z. B.:
+           Foto von [Fotograf:in] auf Unsplash (unsplash.com/photos/…) -->
+      <div class="ps-image" data-reveal>
+        <div class="photo-placeholder">
+          <span>Platzhalter: Reitsport-Foto (Unsplash/Pexels)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FUNKTIONEN ============ -->
+  <section class="features" id="funktionen">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Funktionen</p>
+        <h2>Alles an einem Ort – für beide Seiten.</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <rect x="5" y="7" width="22" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M5 13h22M10 4v6M22 4v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="11" cy="19" r="1.6" fill="currentColor"/>
+              <circle cx="16" cy="19" r="1.6" fill="currentColor"/>
+              <circle cx="21" cy="19" r="1.6" fill="currentColor"/>
+            </svg>
+          </span>
+          <h3>Terminplanung</h3>
+          <p>Ein gemeinsamer Kalender für Trainer:in und Schüler:in – Termine sind für beide Seiten sofort sichtbar, ohne Rückfragen.</p>
+        </article>
+
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <path d="M6 6h13a3 3 0 0 1 3 3v17a2 2 0 0 0-2-2H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M6 6v18h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M11 12h6M11 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Individuelle Trainingspläne</h3>
+          <p>Aus einer Übungsbibliothek entstehen Pläne, die zu den Schwächen der Schüler:in passen – nicht von der Stange.</p>
+        </article>
+
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <path d="M6 26V10M14 26V6M22 26v-9M26 26H6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <h3>Trainingsdoku</h3>
+          <p>Einheiten mit und ohne Trainer:in festhalten – so wird Fortschritt sichtbar, statt nur gefühlt.</p>
+        </article>
+
+        <article class="feature-card" data-reveal>
+          <span class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <circle cx="11" cy="11" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="22" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M4 27c0-4.4 3.4-7.5 7.5-7.5S19 22.6 19 27" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M19.5 20.3c3.4.3 6 3.2 6 6.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3>Ein Konto pro Rolle</h3>
+          <p>Trainer:in und Schüler:in sind miteinander verbunden – alles bleibt synchron, ohne doppelte Eingabe.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SO FUNKTIONIERT'S ============ -->
+  <section class="steps" id="so-funktionierts">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Ablauf</p>
+        <h2>So funktioniert's.</h2>
+      </div>
+
+      <ol class="step-list">
+        <li class="step" data-reveal>
+          <span class="step-number">01</span>
+          <h3>Registrieren &amp; Rolle wählen</h3>
+          <p>Als Trainer:in oder Schüler:in anmelden – TrainAlign richtet den Bereich passend zur Rolle ein.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-number">02</span>
+          <h3>Trainer:in und Schüler:in verknüpfen</h3>
+          <p>Ein einfacher Link verbindet beide Konten – Kalender, Plan und Doku sind fortan geteilt.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-number">03</span>
+          <h3>Planen &amp; dokumentieren</h3>
+          <p>Termine setzen, Übungen zuweisen, Einheiten festhalten – Fortschritt entsteht Schritt für Schritt.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FÜR WEN ============ -->
+  <section class="audience" id="fuer-wen">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Für wen</p>
+        <h2>Gebaut für den ganzen Stall.</h2>
+      </div>
+
+      <div class="audience-grid">
+        <article class="audience-card" data-reveal>
+          <h3>Reittrainer:innen</h3>
+          <p>Behalte alle Schüler:innen, Pläne und Termine im Blick – ohne Excel-Tabellen und WhatsApp-Nachrichten.</p>
+        </article>
+        <article class="audience-card" data-reveal>
+          <h3>Reitschüler:innen</h3>
+          <p>Sieh deinen Trainingsplan, dokumentiere jede Einheit und erkenne, wo du dich verbesserst.</p>
+        </article>
+        <article class="audience-card" data-reveal>
+          <h3>Reitställe &amp; Vereine</h3>
+          <p>Gib Trainer:innen und Mitgliedern ein gemeinsames System an die Hand – strukturiert und verlässlich.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WARTELISTE ============ -->
+  <section class="waitlist" id="warteliste">
+    <div class="wrap waitlist-inner" data-reveal>
+      <p class="eyebrow">Früher Zugang</p>
+      <h2>Sei von Anfang an dabei.</h2>
+      <p class="waitlist-copy">
+        TrainAlign ist noch nicht gelauncht. Trag dich in die Warteliste ein
+        und gehöre zu den Ersten, die die App ausprobieren – mit direktem
+        Draht zum Team und Einfluss auf die Entwicklung.
+      </p>
+
+      <!--
+        Hinweis für die Entwicklung: Dieses Formular ist bewusst Frontend-only.
+        Es findet aktuell keine Übertragung an einen Server statt; die
+        Bestätigung unten wird rein clientseitig angezeigt. Ein Backend
+        (z. B. Supabase-Tabelle für Warteliste) folgt in einem späteren
+        Durchlauf – dort dann action/fetch an den echten Endpunkt ergänzen.
+      -->
+      <form class="waitlist-form" id="waitlistForm" novalidate>
+        <div class="form-row">
+          <label for="waitlistEmail" class="sr-only">E-Mail-Adresse</label>
+          <input
+            type="email"
+            id="waitlistEmail"
+            name="email"
+            class="waitlist-input"
+            placeholder="deine@email.de"
+            autocomplete="email"
+            required
+          >
+          <button type="submit" class="btn btn-primary">Frühen Zugang sichern</button>
+        </div>
+        <p class="form-message" id="waitlistMessage" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="wordmark footer-wordmark">TrainAlign</p>
+      <p class="footer-claim">Training im Einklang.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer-Navigation">
+      <ul>
+        <li><a href="#funktionen">Funktionen</a></li>
+        <li><a href="#so-funktionierts">So funktioniert's</a></li>
+        <li><a href="#fuer-wen">Für wen</a></li>
+        <li><a href="#warteliste">Warteliste</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-legal" aria-label="Rechtliches">
+      <ul>
+        <!-- Platzhalter-Links: vor Launch durch echte Seiten ersetzen -->
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; 2026 TrainAlign. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
